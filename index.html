@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Ying-Hsuan Chen</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+
+<style>
+body {background-color: aliceblue;}
+h1 {
+    text-align:center;
+    color:cadetblue;
+    font-size: 200%;
+      
+}
+p {
+    color: darkslategray;
+    border: 2px solid cadetblue;
+    padding: 30px;
+    font-size: 130%;
+    margin: 50px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a:link {
+    color: darkcyan;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited{
+    color: steelblue;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover{
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+</style>
+
+<body>
+
+<audio loop autoplay controls>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<h1>Biosketch</h1>
+<img src="picture.jpg" alt="picture" style = "width:500px; height:350px">
+<p>
+
+Ying-Hsuan Chen, graduated from Taipei First Girls High School in 2019. She now studying 
+in the electrical engineering departmaent of National Taiwan University. 
+<br>
+<br>
+<a href= "http://www.fg.tp.edu.tw/bin/home.php" target = "_blank">More about Taipei First Girls High School</a>
+<br>
+<a href= "https://web.ee.ntu.edu.tw/" target = "_blank">More about NTUEE</a>
+</p>
+
+<p>
+She likes to read novels and "A Gentleman in Moscow" is her favorite book recently. She also enjoys 
+listening to different genres of music like classical music, jazz, pop music, in her free time.
+"All too well" by Taylor Swift is her all time favorite. Besides, she likes to watch YouTube and 
+"TwoSetViolin" is her favorite channel.
+<br>
+<br>
+<a href= "https://www.goodreads.com/book/show/34066798-a-gentleman-in-moscow" target = "_blank">More about "A Gentleman in Miscow"</a>
+<br>
+<a href= "https://www.youtube.com/watch?v=F8Jxo15Vfic" target = "_blank">More about "All too well" by Taylor Swift</a>
+<br>
+<a href= "https://www.youtube.com/user/twosetviolin" target = "_blank">More about TwoSetViolin</a>
+<body onload="ShowTime()">
+<p>Date/Time: <span id="datetime"></span></p>
+
+<script language = "JavaScript">
+function ShowTime(){
+    var NowDate = new Date();
+    var m = (NowDate.getMonth()+1);
+    var d = ("0"+NowDate.getDate()).slice(-2);
+    var y = NowDate.getFullYear();
+    var h = ("0"+NowDate.getHours()).slice(-2);
+    var min = ("0"+NowDate.getMinutes()).slice(-2);
+    var s = ("0"+NowDate.getSeconds()).slice(-2);
+    document.getElementById("datetime").innerHTML = m+"-"+d+"-"+y+" "+h+":"+min+":"+s;
+    setTimeout('ShowTime()',1000);
+    }
+
+</script>
+
+</body>
+</html>
